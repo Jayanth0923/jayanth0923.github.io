@@ -2,32 +2,24 @@ import { motion } from "motion/react";
 
 const skillsData = [
   {
-    category: "Programming",
-    items: ["Python", "Java", "C Programming", "HTML", "CSS", "JavaScript"],
+    category: "Languages",
+    items: ["Python", "HTML", "CSS"],
   },
   {
-    category: "Frontend",
-    items: ["HTML", "CSS", "JavaScript", "React", "Tailwind CSS"],
+    category: "SAP",
+    items: ["SAP ABAP Cloud"],
+  },
+  {
+    category: "Tools & Technologies",
+    items: ["GitHub", "Flask", "VS Code"],
+  },
+  {
+    category: "Concepts",
+    items: ["Machine Learning", "UI/UX Design", "Software Development", "OOP", "GenAI"],
   },
   {
     category: "Design",
     items: ["Wireframing", "UI/UX Design", "Prototyping", "Figma"],
-  },
-  {
-    category: "Tools",
-    items: ["GitHub", "VS Code", "Microsoft Word"],
-  },
-  {
-    category: "Technologies",
-    items: ["WordPress", "AWS (Basic)", "MongoDB", "Flask"],
-  },
-  {
-    category: "Machine Learning",
-    items: ["Scikit-Learn", "XGBoost", "Pandas", "NumPy", "Ensemble Learning"],
-  },
-  {
-    category: "Soft Skills",
-    items: ["Communication", "Problem Solving", "Team Collaboration"],
   },
 ];
 
