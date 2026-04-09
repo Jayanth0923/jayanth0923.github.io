@@ -27,7 +27,7 @@ export default function Education() {
                 subtitle="Computer Science and Technology"
                 institution="R.M.K College of Engineering and Technology, Tiruvallur"
                 year="2022 - 2026"
-                score="CGPA: 7.02"
+                score="CGPA: 7.20"
                 current
               />
               <TimelineItem
@@ -61,6 +61,11 @@ export default function Education() {
               className="bg-white border border-zinc-200 rounded-3xl p-8 shadow-sm"
             >
               <ul className="space-y-6">
+                <CertItem
+                  title="SAP Certified – Backend Developer – ABAP Cloud"
+                  issuer="SAP"
+                  link="https://drive.google.com/file/d/115q3g2w_rusJbJDuUOo3kdMPZsRz4Ibj/view?usp=sharing"
+                />
                 <CertItem title="Python Certification" issuer="Udemy" />
                 <CertItem title="UI/UX Design Certification" issuer="Corizo" />
                 <CertItem title="MongoDB Certification" issuer="MongoDB" />
@@ -120,16 +125,43 @@ function TimelineItem({
   );
 }
 
-function CertItem({ title, issuer }: { title: string; issuer: string }) {
-  return (
-    <li className="flex items-start gap-4">
+function CertItem({
+  title,
+  issuer,
+  link,
+}: {
+  title: string;
+  issuer: string;
+  link?: string;
+}) {
+  const content = (
+    <div className="flex items-start gap-4">
       <div className="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-1">
         <Award className="w-5 h-5" />
       </div>
       <div>
         <h4 className="text-lg font-bold text-zinc-900">{title}</h4>
-        <p className="text-zinc-600">{issuer}</p>
+        <p className="text-zinc-600">
+          {issuer}
+          {link && (
+            <span className="ml-2 text-primary hover:underline font-medium">
+              • Credly
+            </span>
+          )}
+        </p>
       </div>
+    </div>
+  );
+
+  return (
+    <li>
+      {link ? (
+        <a href={link} target="_blank" rel="noopener noreferrer">
+          {content}
+        </a>
+      ) : (
+        content
+      )}
     </li>
   );
 }

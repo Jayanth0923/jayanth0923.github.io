@@ -33,10 +33,11 @@ export default function About() {
             <p className="text-lg text-zinc-700 leading-relaxed mb-6">
               I enjoy working across both development and design, with hands-on
               experience in Python, SQL, C programming, and frontend
-              technologies like HTML, CSS, and JavaScript. I also have a strong
-              interest in UI/UX design, where I create wireframes and
-              interactive prototypes using Figma, focusing on usability and
-              modern design standards.
+              technologies like HTML, CSS, and JavaScript. I am also a{" "}
+              <span className="font-semibold text-primary">
+                SAP Certified Backend Developer – ABAP Cloud (2026)
+              </span>
+              , having completed professional training in SAP ABAP.
             </p>
             <p className="text-lg text-zinc-700 leading-relaxed">
               Through academic projects and personal work, I've developed skills
@@ -47,7 +48,7 @@ export default function About() {
           </motion.div>
 
           {/* Info Cards */}
-          <div className="grid sm:grid-cols-2 gap-6">
+          <div className="grid sm:grid-cols-2 gap-6 h-full">
             <InfoCard
               icon={<GraduationCap className="w-6 h-6" />}
               title="Education"
@@ -62,8 +63,8 @@ export default function About() {
             />
             <InfoCard
               icon={<Briefcase className="w-6 h-6" />}
-              title="Experience"
-              desc="AI Workshop at IIT Madras"
+              title="Certification"
+              desc="SAP Certified ABAP Cloud"
               delay={0.3}
             />
             <InfoCard
@@ -96,7 +97,7 @@ function InfoCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay }}
-      className="bg-white border border-zinc-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
+      className="bg-white border border-zinc-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow h-full flex flex-col items-center text-center justify-center"
     >
       <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4">
         {icon}
