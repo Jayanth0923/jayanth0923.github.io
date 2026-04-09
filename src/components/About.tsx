@@ -58,7 +58,7 @@ export default function About() {
             <InfoCard
               icon={<MapPin className="w-6 h-6" />}
               title="Location"
-              desc="Tirupati, India"
+              desc="Tirupati, Andhra Pradesh India"
               delay={0.2}
             />
             <InfoCard
