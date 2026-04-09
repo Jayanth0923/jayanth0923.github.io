@@ -9,9 +9,33 @@ import {
   ShoppingCart,
   Lock,
   Wallet,
+  Zap,
 } from "lucide-react";
 
 const projects = [
+  {
+    id: 6,
+    title: "EV Battery Life Prediction For Swappig Stations",
+    year: "2026",
+    icon: <Zap className="w-8 h-8" />,
+    shortDesc:
+      "A machine learning-driven web application designed to optimize electric vehicle (EV) battery swapping stations using dynamic pricing.",
+    tags: ["Machine Learning", "Python", "Flask", "Ensemble Learning"],
+    details: {
+      overview:
+        "A machine learning-driven web application designed to optimize electric vehicle (EV) battery swapping stations. By accurately predicting the Remaining Useful Life (RUL) of EV batteries, this system replaces traditional flat-rate charging models with a dynamic, health-aware pricing algorithm, ensuring fair costs for consumers based on actual battery degradation.",
+      problem:
+        "Electric vehicle batteries degrade non-linearly over time due to repeated charging and discharging cycles. In current battery swapping networks, batteries of vastly different health conditions are exchanged at standard flat rates. This creates significant economic unfairness—users are often charged the same amount for heavily degraded batteries as they are for brand-new ones. Existing infrastructure lacks a reliable, transparent way to estimate battery health and link it directly to consumer pricing.",
+      process:
+        "Data Engineering: Sourced and pre-processed the standard NASA Lithium-ion Battery Dataset, extracting critical discharge features to model complex degradation patterns. Model Development: Trained and evaluated multiple machine learning models. Built a robust ensemble learning framework combining Random Forest and XGBoost regressors using weighted averaging. Evaluation: Tested the models against standard performance metrics. The ensemble approach successfully achieved the lowest Mean Absolute Error (MAE) and Mean Squared Error (MSE), alongside the highest R² score compared to standalone baseline models. Algorithm Design: Engineered a custom business-logic algorithm to map the continuous RUL predictions directly to a dynamic cost scale. Deployment: Packaged the machine learning pipeline into an interactive web application using Python, Flask, and HTML/CSS/JS, allowing for real-time battery health evaluation and pricing generation.",
+      solution:
+        "I developed a comprehensive machine learning framework that accurately predicts the Remaining Useful Life (RUL) of EV batteries. By integrating this predictive model with a dynamic pricing calculator, the system automatically adjusts the battery replacement fee. Users are charged proportionally to the exact remaining life and health of the battery they receive, ensuring complete transparency and fairness.",
+      novelty:
+        "Traditional battery swapping stations operate on a 'blind exchange' flat-rate model. The novelty of this project lies in bridging advanced battery prognostics with consumer economics. Instead of just predicting battery life in an isolated lab environment, this project translates complex ML predictions into a practical, real-world Health-Aware Pricing Strategy, creating a fundamentally new, user-centric business model for EV swapping stations.",
+      impact:
+        "Consumer Fairness: Eliminates overcharging for degraded batteries, fostering greater consumer trust in EV swapping networks. High Accuracy: The ensemble approach significantly reduced prediction errors, ensuring highly reliable battery health assessments. Sustainability: Promotes better lifecycle management of lithium-ion batteries by precisely tracking their health and optimizing their usage in the field. Real-World Ready: The system is computationally efficient and deployed as a scalable web application, ready for real-time IoT integration.",
+    },
+  },
   {
     id: 5,
     title: "BudgetBee",
@@ -254,6 +278,12 @@ export default function Projects() {
                     title="Solution"
                     content={selectedProject.details.solution}
                   />
+                  {selectedProject.details.novelty && (
+                    <Section
+                      title="Novelty"
+                      content={selectedProject.details.novelty}
+                    />
+                  )}
                   <Section
                     title="Impact"
                     content={selectedProject.details.impact}

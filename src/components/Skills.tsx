@@ -19,7 +19,11 @@ const skillsData = [
   },
   {
     category: "Technologies",
-    items: ["WordPress", "AWS (Basic)", "MongoDB"],
+    items: ["WordPress", "AWS (Basic)", "MongoDB", "Flask"],
+  },
+  {
+    category: "Machine Learning",
+    items: ["Scikit-Learn", "XGBoost", "Pandas", "NumPy", "Ensemble Learning"],
   },
   {
     category: "Soft Skills",
